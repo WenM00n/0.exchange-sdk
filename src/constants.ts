@@ -14,7 +14,7 @@ export enum ChainId {
   SMART_CHAIN = 56,
   SMART_CHAIN_TEST = 97,
   MOONBASE_ALPHA = 1287,
-  MUMBAI = 80001,
+  MUMBAI = 80001
 }
 
 export enum TradeType {
@@ -66,7 +66,7 @@ export const FACTORY_AND_INIT: any = {
   [ChainId.MUMBAI]: {
     factoryAddress: '0xeEdaAB3cdb85B77430f2272f6cDbaE2020F48c80',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
-  },
+  }
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)

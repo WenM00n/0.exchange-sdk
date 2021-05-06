@@ -19,13 +19,14 @@ export class CurrencyAmount extends Fraction {
    * @param amount ether amount in wei
    */
   public static ether(amount: BigintIsh, chainId?: ChainId): CurrencyAmount {
-    let currency = ETHER;
-    if (chainId && chainId === ChainId.AVALANCHE || chainId === ChainId.FUJI) {
-      currency = AVAX;
+    let currency = ETHER
+    if ((chainId && chainId === ChainId.AVALANCHE) || chainId === ChainId.FUJI) {
+      currency = AVAX
     }
-    if (chainId && chainId === ChainId.SMART_CHAIN || chainId === ChainId.SMART_CHAIN_TEST) {
-      currency = BNB;
+    if ((chainId && chainId === ChainId.SMART_CHAIN) || chainId === ChainId.SMART_CHAIN_TEST) {
+      currency = BNB
     }
+
     if (chainId && chainId === ChainId.MOONBASE_ALPHA) {
       currency = DEV;
     }

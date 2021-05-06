@@ -37,8 +37,8 @@ jobs:
             ${{ matrix.os }}-yarn-
 
       - run: yarn
-
       - run: yarn lint
+      - run: npx browserslist@latest --update-db
       - run: yarn build
       - run: yarn test
   
@@ -57,4 +57,3 @@ jobs:
     - run: yarn publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-

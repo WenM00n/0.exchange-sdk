@@ -21,7 +21,6 @@ export class Currency {
   public static readonly DEV: Currency = new Currency(18, 'DEV', 'DEV')
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
 
-
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
    * @param decimals decimals of the currency
